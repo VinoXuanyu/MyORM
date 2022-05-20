@@ -2,13 +2,15 @@ package session
 
 import (
 	"database/sql"
+	"geeorm/dialect"
 	_ "github.com/mattn/go-sqlite3"
 	"testing"
 )
 
 func NewSession() *Session {
 	TestDB, _ := sql.Open("sqlite3", "../gee.db")
-	return New(TestDB)
+	dial, _ := dialect.GetDialect("sqlite3")
+	return New(TestDB, dial)
 }
 
 func TestSession_Exec(t *testing.T) {

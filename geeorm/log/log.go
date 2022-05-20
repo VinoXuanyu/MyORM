@@ -15,10 +15,10 @@ var (
 )
 
 var (
-	Error = errorLog.Println
-	Errof = errorLog.Printf
-	Info  = infoLog.Println
-	Infof = infoLog.Printf
+	Error  = errorLog.Println
+	Errorf = errorLog.Printf
+	Info   = infoLog.Println
+	Infof  = infoLog.Printf
 )
 
 const (
