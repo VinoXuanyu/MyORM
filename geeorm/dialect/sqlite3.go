@@ -37,5 +37,5 @@ func (s *sqlite3) DataTypeOf(typ reflect.Value) string {
 
 func (s *sqlite3) TableExistSQL(tableName string) (string, []interface{}) {
 	args := []interface{}{tableName}
-	return "select name from sqlite_master where type = 'table' and name = ?", args
+	return "select name from sqlite_master where type = 'table' and name = ?;", args
 }
